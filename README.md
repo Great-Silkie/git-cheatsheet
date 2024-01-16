@@ -225,3 +225,19 @@ graph TD;
   modified -- "git add" --> staged_+_tracked;
   staged_+_tracked -- "изменения" --> modified;
 ```
+
+### Как читать git status
+-------------------------
+
+В отчет git status не входят файлы со статусом tracked
+
+В выводе git status есть файлы:
+1. staged (Changes to be commited)
+2. modified (Changes not staged for commit)
+3. untracked (untracked files)
+
+Варианты вывода git status:
+1. Нет ни staged, ни modified, ни untracked файлов
+2. Найдены неотслеживаемые файлы
+3. Найдены изменения, которые не войдут в коммит
+4. Файл добавлен в staging area, но послеэтого изменен
